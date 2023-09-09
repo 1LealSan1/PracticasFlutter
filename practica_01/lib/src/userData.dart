@@ -39,6 +39,13 @@ class _DatosUsuariosState extends State<DatosUsuarios> {
                 contentPadding: EdgeInsets.all(5),
                 hintText: 'Ingresa tu nombre'),
           ),
+          TextField(
+            controller: phoneCtrl,
+            keyboardType: TextInputType.phone,
+            decoration: const InputDecoration(
+                contentPadding: EdgeInsets.all(5),
+                hintText: 'Ingresa numero de celular'),
+          ),
           const SizedBox(height: 10.0),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
