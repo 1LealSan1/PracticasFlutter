@@ -1,6 +1,7 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <application
-        android:label="pract1"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hola_mundo">
+   <application
+        android:label="hola_mundo"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

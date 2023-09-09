@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( const MainApp());
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -37,46 +37,45 @@ class _CounterAppState extends State<CounterApp> {
       contador--;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Contador Flutter'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Número de clics:',
-              style: TextStyle(fontSize: 20),
-            ),
-            Text(
-              '$contador',
-              style: const TextStyle(fontSize: 40),
-            ),
-          ],
+        appBar: AppBar(
+          title: const Text('Contador Flutter'),
         ),
-      ),
-      floatingActionButton:
-      Padding(
-        padding: const EdgeInsets.all(2.0), // Padding alrededor de los textos
-        child: Column(  
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: <Widget>[
-        FloatingActionButton(
-          onPressed: _incrementCounter,
-          tooltip: 'Incrementar',
-          child: const Icon(Icons.add),
-        ),        
-        const SizedBox(height: 20),
-        FloatingActionButton(
-          onPressed: _removeCounter,
-          tooltip: 'Incrementar',
-          child:  const Icon(Icons.remove, color: (Colors.red)),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text(
+                'Número de clics:',
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                '$contador',
+                style: const TextStyle(fontSize: 40),
+              ),
+            ],
+          ),
         ),
-        ]    
-       ))
-    );
+        floatingActionButton: Padding(
+            padding:
+                const EdgeInsets.all(2.0), // Padding alrededor de los textos
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  FloatingActionButton(
+                    onPressed: _incrementCounter,
+                    tooltip: 'Incrementar',
+                    child: const Icon(Icons.add),
+                  ),
+                  const SizedBox(height: 20),
+                  FloatingActionButton(
+                    onPressed: _removeCounter,
+                    tooltip: 'Incrementar',
+                    child: const Icon(Icons.remove, color: (Colors.red)),
+                  ),
+                ])));
   }
 }
